@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="639.0" prefWidth="888.0" style="-fx-background-color: FFE4B5;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="panaderia.FXMLPanaderiaController">
+    <children>
+      
+      <Label layoutX="377.0" layoutY="27.0" text="PANADERIA">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="52.0" prefHeight="62.0" prefWidth="354.0" text="El Ángel de Azúcar">
+         <font>
+            <Font name="Verdana" size="36.0" />
+         </font>
+      </Label>
+      
+      <Separator layoutX="242.0" layoutY="125.0" prefHeight="3.0" prefWidth="632.0" />
+      
+      <ImageView fitHeight="86.0" fitWidth="175.0" layoutX="46.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="src/main/resources/images/logo.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="14.0" layoutY="94.0" prefHeight="1.0" prefWidth="221.0" />
+      
+      <TitledPane animated="false" layoutX="11.0" layoutY="110.0" prefHeight="476.0" prefWidth="211.0" style="-fx-background-color: FFFFE0;" text="Menú">
+         <content>
+            <AnchorPane fx:id="apOperaciones" blendMode="MULTIPLY" minHeight="0.0" minWidth="0.0" prefHeight="452.0" prefWidth="209.0">
+               <children>
+                  <Button alignment="BASELINE_LEFT" layoutY="0.0" mnemonicParsing="false" onAction="#registrarCliente" prefHeight="25.0" prefWidth="210.0" text="Registrar cliente">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/regCliente.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutY="45.0" mnemonicParsing="false" onAction="#registrarPan" prefHeight="25.0" prefWidth="210.0" text="Registrar pan">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/regPan.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutY="90.0" mnemonicParsing="false" onAction="#realizarVenta" prefHeight="25.0" prefWidth="210.0" text="Comprar">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/venta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutY="135.0" mnemonicParsing="false" onAction="#historialCompras" prefHeight="25.0" prefWidth="210.0" text="Ver historial">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/historial3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutY="180.0" mnemonicParsing="false" onAction="#mejorCliente" prefHeight="25.0" prefWidth="210.0" text="Mejor cliente">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/mejorCliente.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutY="225.0" mnemonicParsing="false" onAction="#panMasVendido" prefHeight="25.0" prefWidth="210.0" text="Pan más vendido">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/masVendido.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutY="270.0" mnemonicParsing="false" onAction="#verConchapuntos" prefHeight="25.0" prefWidth="210.0" text="Ver conchapuntos">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/verCP.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutY="315.0" mnemonicParsing="false" onAction="#canjearConchapuntos" prefHeight="25.0" prefWidth="210.0" text="Canjear conchapuntos">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/canjearCP.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutY="360.0" mnemonicParsing="false" onAction="#verClientes" prefHeight="25.0" prefWidth="210.0" text="Ver clientes">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" layoutY="405.0" mnemonicParsing="false" onAction="#verPanes" prefHeight="25.0" prefWidth="210.0" text="Ver panes">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/consultar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      
+      <Label fx:id="lbFecha" alignment="CENTER" layoutX="19.0" layoutY="606.0" prefHeight="25.0" prefWidth="196.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      
+      <Separator layoutX="234.0" layoutY="27.0" orientation="VERTICAL" prefHeight="592.0" prefWidth="6.0" />
+
+      
+      
+      <TabPane fx:id="tpOperaciones" cache="true" layoutX="252.0" layoutY="146.0" prefHeight="487.0" prefWidth="620.0" rotateGraphic="true" style="-fx-background-color: FFEFD5;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            
+            <Tab fx:id="tbRegistrarCliente" closable="false" text="Registrar cliente">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+               <content>
+                  <AnchorPane prefHeight="483.0" prefWidth="620.0">
+                     <children>
+                        <ComboBox fx:id="cbTipo" layoutX="180.0" layoutY="44" onAction="#seleccionarTipo" prefHeight="25.0" prefWidth="200.0" promptText="Selecciona el tipo de cliente..." />
+                        <Label alignment="CENTER" layoutX="66.0" layoutY="44.0" prefHeight="27.0" prefWidth="110.0" text="Tipo de cliente:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="81.0" text="ID:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfIDC" layoutX="101.0" layoutY="76.0" prefHeight="31.0" prefWidth="230.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="66.0" layoutY="122.0" prefHeight="27.0" prefWidth="80.0" text="Nombre:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfNombreC" layoutX="148.0" layoutY="117.0" prefHeight="31.0" prefWidth="184.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="65.0" layoutY="166.0" text="Apellido paterno:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfApellido" layoutX="221.0" layoutY="162.0" prefHeight="31.0" prefWidth="110.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="492.0" layoutY="173.0" text="Dirección">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="30.0" layoutY="207.0" prefHeight="3.0" prefWidth="561.0" />
+                        <Label layoutX="73.0" layoutY="232.0" text="Calle:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfCalle" layoutX="135.0" layoutY="221.0" prefHeight="37.0" prefWidth="155.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="73.0" layoutY="269.0" text="Número:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfNumero" layoutX="155.0" layoutY="262.0" prefHeight="37.0" prefWidth="134.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="74.0" layoutY="312.0" text="Colonia:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfColonia" layoutX="158.0" layoutY="305.0" prefHeight="37.0" prefWidth="130.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="74.0" layoutY="358.0" text="CP:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfCP" layoutX="111.0" layoutY="353.0" prefHeight="37.0" prefWidth="175.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="327.0" layoutY="228.0" text="Ciudad:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfCiudad" layoutX="403.0" layoutY="221.0" prefHeight="37.0" prefWidth="177.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="328.0" layoutY="270.0" text="Estado:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfEstado" layoutX="403.0" layoutY="263.0" prefHeight="37.0" prefWidth="177.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="329.0" layoutY="314.0" text="Teléfono:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfTelefono" layoutX="422.0" layoutY="307.0" prefHeight="37.0" prefWidth="157.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btnGuardarC" layoutX="273.0" layoutY="407.0" mnemonicParsing="false" onAction="#procesarGuardarRC" prefHeight="31.0" prefWidth="119.0" text="Guardar">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/guardar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="564.0" layoutY="7.0" mnemonicParsing="false" onAction="#cancelarRC">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            
+            <Tab fx:id="tbRegistrarPan" closable="false" text="Registrar pan">
+               <content>
+                  <AnchorPane prefHeight="458.0" prefWidth="498.0">
+                     <children>
+                        <Label layoutX="196.0" layoutY="95.0" text="ID:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfIDP" layoutX="237.0" layoutY="88.0" prefHeight="37.0" prefWidth="189.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="197.0" layoutY="144.0" text="Nombre:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfNombreP" layoutX="280.0" layoutY="137.0" prefHeight="37.0" prefWidth="146.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="195.0" layoutY="193.0" text="Precio:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfPrecio" layoutX="269.0" layoutY="186.0" prefHeight="37.0" prefWidth="156.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="196.0" layoutY="239.0" text="Existencia:">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfExistencia" layoutX="297.0" layoutY="232.0" prefHeight="37.0" prefWidth="128.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btnGuardarP" layoutX="178.0" layoutY="303.0" mnemonicParsing="false" onAction="#guardarRP" prefHeight="31.0" prefWidth="119.0" text="Guardar">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/guardar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnActualizar" layoutX="327.0" layoutY="303.0" mnemonicParsing="false" onAction="#actualizarDatos" prefHeight="37.0" prefWidth="122.0" text="Actualizar">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/canjearCP.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="564.0" layoutY="7.0" mnemonicParsing="false" onAction="#cancelarRP">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button alignment="CENTER" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#solicitarActualizacion" prefHeight="56.0" prefWidth="122.0" text="Actualizar existencia" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/imprimir.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                    </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            
+            <Tab fx:id="tbRealizarVenta" closable="false" text="Realizar venta">
+               <content>
+                  <AnchorPane prefHeight="482.0" prefWidth="646.0">
+                     <children>
+                        <Label fx:id="lbIDV" layoutX="62.0" layoutY="51.0" text="Ingresa el ID del Cliente:">
+                           <font>
+                              <Font name="Verdana" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfIDV" layoutX="266.0" layoutY="43.0" prefHeight="3.0" prefWidth="89.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="cbPanes" layoutX="39.0" layoutY="108.0" onAction="#seleccionarPan" prefHeight="36.0" prefWidth="240.0" promptText="Selecciona un pan..." />
+                        <TextField fx:id="tfCantidadPan" alignment="CENTER" disable="true" layoutX="279.0" layoutY="108.0" prefHeight="37.0" prefWidth="122.0" promptText="Cantidad de panes">
+                           <font>
+                              <Font size="13.0" />
+                           </font></TextField>
+                        <Button fx:id="btnCargar" disable="true" layoutX="110.0" layoutY="168.0" mnemonicParsing="false" onAction="#cargarCompra" text="Cargar">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/comprar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnDevolver" disable="true" layoutX="230.0" layoutY="168.0" mnemonicParsing="false" onAction="#descargarCompra" text="Devolver">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/devolver.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TableView fx:id="tvVentas" layoutX="14.0" layoutY="229.0" onMouseClicked="#obtenerArticulo" prefHeight="241.0" prefWidth="416.0">
+                           <columns>
+                              <TableColumn fx:id="tcIdPV" prefWidth="41.0" text="ID" />
+                              <TableColumn fx:id="tcProductoV" prefWidth="131.0" text="Producto" />
+                              <TableColumn fx:id="tcCantidadV" prefWidth="78.0" text="Cantidad" />
+                              <TableColumn fx:id="tcPrecioV" prefWidth="76.0" text="Precio" />
+                              <TableColumn fx:id="tcMontoV" prefWidth="89.0" text="Monto" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="450.0" layoutY="236.0" text="Total">
+                           <font>
+                              <Font name="Verdana" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbTotal" layoutX="519.0" layoutY="235.0" prefHeight="25.0" prefWidth="86.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label layoutX="450.0" layoutY="271.0" text="Efectivo">
+                           <font>
+                              <Font name="Verdana" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfEfectivo" layoutX="517.0" layoutY="264.0" prefHeight="3.0" prefWidth="89.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font></TextField>
+                        <Label layoutX="451.0" layoutY="310.0" text="Cambio">
+                           <font>
+                              <Font name="Verdana" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbCambio" layoutX="519.0" layoutY="308.0" prefHeight="27.0" prefWidth="86.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Button fx:id="btnCobrar" disable="true" layoutX="473.0" layoutY="356.0" mnemonicParsing="false" onAction="#cobrarVenta" prefHeight="25.0" prefWidth="101.0" text="Cobrar">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/pagar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnTicket" disable="true" layoutX="450.0" layoutY="415.0" mnemonicParsing="false" onAction="#imprimirTicket" prefHeight="25.0" prefWidth="147.0" text="Imprimir Ticket">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/imprimir.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="btnCancelar" layoutX="564.0" layoutY="7.0" mnemonicParsing="false" onAction="#cancelarVenta">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+               
+            <Tab fx:id="tbHistorialCompras" closable="false" text="Historial">
+               <content>
+                  <AnchorPane prefHeight="424.0" prefWidth="614.0">
+                     <children>
+                        <Label layoutX="69.0" layoutY="98.0" text="Ingresa el iD del cliente:">
+                           <font>
+                              <Font name="Verdana" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="440.0" layoutY="92.0" mnemonicParsing="false" onAction="#consultarHistorial" text="Consultar">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/consultar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="tfMC" layoutX="272.0" layoutY="96.0" onMouseClicked="#nuevaConsulta" prefHeight="30.0" prefWidth="168.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="564.0" layoutY="7.0" mnemonicParsing="false" onAction="#cancelarHistorial">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="lbDatosH" layoutX="76.0" layoutY="150.0">
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tvHistorial" layoutX="26.0" layoutY="185.0" prefHeight="241.0" prefWidth="576.0">
+                           <columns>
+                              <TableColumn fx:id="tcFechaH" prefWidth="75.0" text="Fecha" />
+                              <TableColumn fx:id="tcIdH" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="tcProductoH" prefWidth="135.0" text="Producto" />
+                              <TableColumn fx:id="tcCantidadH" prefWidth="94.0" text="Cantidad" />
+                              <TableColumn fx:id="tcPrecioH" prefWidth="100.0" text="Precio" />
+                              <TableColumn fx:id="tcMontoH" prefWidth="96.0" text="Monto" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            
+            <Tab fx:id="tbMejorCliente" closable="false" text="Mejor Cliente">
+               <content>
+                  <AnchorPane prefHeight="424.0" prefWidth="614.0">
+                     <children>
+                        <Label layoutX="190.0" layoutY="50.0" text="Ingresa el intervalo de fechas:">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dpInicioMC" layoutX="90.0" layoutY="100.0" onMouseClicked="#nuevaConsultaMC" prefHeight="42.0" prefWidth="216.0" />
+                        <DatePicker fx:id="dpFinMC" layoutX="320.0" layoutY="100.0" onMouseClicked="#nuevaConsultaMC" prefHeight="42.0" prefWidth="216.0" />
+                        <Button layoutX="260.0" layoutY="160.0" mnemonicParsing="false" onAction="#consultarMC" text="Consultar">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/consultar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="lbMC" layoutX="219.0" layoutY="240.0" prefHeight="180.0" prefWidth="324.0">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font></Label>
+                        <Button layoutX="564.0" layoutY="7.0" mnemonicParsing="false" onAction="#cancelarMC">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ImageView fx:id="ivMedallaMC" fitHeight="150.0" fitWidth="200.0" layoutX="47.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/medalla.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            
+            <Tab fx:id="tbPanMasVendido" closable="false" text="Pan más vendido">
+               <content>
+                  <AnchorPane prefHeight="458.0" prefWidth="621.0">
+                     <children>
+                        <Label layoutX="190.0" layoutY="50.0" text="Ingresa el intervalo de fechas:">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dpInicioPMV" layoutX="90.0" layoutY="100.0" onMouseClicked="#nuevaConsultaPMV" prefHeight="42.0" prefWidth="216.0" />
+                        <DatePicker fx:id="dpFinPMV" layoutX="320.0" layoutY="100.0" onMouseClicked="#nuevaConsultaPMV" prefHeight="42.0" prefWidth="216.0" />
+                        <Button layoutX="260.0" layoutY="160.0" mnemonicParsing="false" onAction="#consultarPMV" text="Consultar">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/consultar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="lbPMV" layoutX="228.0" layoutY="240.0" prefHeight="180.0" prefWidth="315.0">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font></Label>
+                        <Button layoutX="564.0" layoutY="7.0" mnemonicParsing="false" onAction="#cancelarPMV">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <ImageView fx:id="ivMedallaPMV" fitHeight="150.0" fitWidth="200.0" layoutX="47.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/medalla.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            
+            <Tab fx:id="tbVerConchapuntos" closable="false" text="Ver conchapuntos">
+               <content>
+                  <AnchorPane onMouseClicked="#nuevaConsultaCP" prefHeight="424.0" prefWidth="614.0">
+                     <children>
+                        <Label layoutX="110.0" layoutY="86.0" text="Ingresa el iD del cliente:">
+                           <font>
+                              <Font name="Verdana" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfVerCP" layoutX="311.0" layoutY="81.0" onMouseClicked="#nuevaConsultaCP" prefHeight="37.0" prefWidth="200.0" />
+                        <Button layoutX="264.0" layoutY="145.0" mnemonicParsing="false" onAction="#verCP" text="Consultar">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/consultar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="lbVerCP" layoutX="158.0" layoutY="251.0" prefHeight="107.0" prefWidth="332.0">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="564.0" layoutY="7.0" mnemonicParsing="false" onAction="#cancelarCP">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            
+            <Tab fx:id="tbCanjearConchapuntos" closable="false" text="Canjear conchapuntos">
+               <content>
+                  <AnchorPane prefHeight="424.0" prefWidth="614.0">
+                     <children>
+                        <Label layoutX="107.0" layoutY="109.0" text="Ingresa el iD del cliente:">
+                           <font>
+                              <Font name="Verdana" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfConsultarCP" layoutX="306.0" layoutY="100.0" onMouseClicked="#nuevaConsultaCCP" prefHeight="37.0" prefWidth="210.0" />
+                        <Button layoutX="251.0" layoutY="152.0" mnemonicParsing="false" onAction="#verCPA" text="Consultar">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources//images/consultar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="lbDatosCanjear" layoutX="131.0" layoutY="202.0" prefHeight="145.0" prefWidth="380.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label fx:id="lbCanjearCP" layoutX="74.0" layoutY="364.0" text="¿Cuántas manteconchas desea canjear?:">
+                           <font>
+                              <Font name="Verdana" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfCanjear" layoutX="395.0" layoutY="355.0" prefHeight="37.0" prefWidth="121.0" />
+                        <Button fx:id="btnCanjear" layoutX="271.0" layoutY="407.0" mnemonicParsing="false" onAction="#canjearCP" text="Canjear">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/canjearCP.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="564.0" layoutY="7.0" mnemonicParsing="false" onAction="#cancelarCCP" prefHeight="37.0" prefWidth="6.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="lbCPA" layoutX="383.0" layoutY="149.0" prefHeight="44.0" prefWidth="56.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tbVerClientes" text="Ver clientes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvClientes" layoutX="7.0" layoutY="50.0" prefHeight="400.0" prefWidth="608.0">
+                          <columns>
+                            <TableColumn fx:id="tcIDC" prefWidth="30.0" text="ID" />
+                            <TableColumn fx:id="tcNombreC" prefWidth="78.0" text="Nombre" />
+                            <TableColumn fx:id="tcApellido" prefWidth="80.0" text="Apellido" />
+                            <TableColumn fx:id="tcDireccion" prefWidth="325.0" text="Dirección" />
+                            <TableColumn fx:id="tcConchapuntos" prefWidth="95.0" text="Conchapuntos" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="564.0" layoutY="7.0" mnemonicParsing="false" onAction="#cancelarVC">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            
+            <Tab fx:id="tbVerPanes" text="Ver panes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvPanes" editable="true" layoutX="61.0" layoutY="85.0" prefHeight="308.0" prefWidth="492.0">
+                          <columns>
+                            <TableColumn fx:id="tcIDP" prefWidth="98.0" text="ID" />
+                            <TableColumn fx:id="tcNombreP" prefWidth="156.0" text="Nombre" />
+                              <TableColumn fx:id="tcPrecio" prefWidth="114.0" text="Precio" />
+                              <TableColumn fx:id="tcExistencia" minWidth="0.0" prefWidth="127.0" text="Existencia" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="564.0" layoutY="7.0" mnemonicParsing="false" onAction="#cancelarVP">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tbTicket" text="Ticket">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="495.0" prefWidth="620.0">
+                     <children>
+                        <ImageView fitHeight="77.0" fitWidth="200.0" layoutX="240.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="src/main/resources/images/logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lbDatos" alignment="CENTER" layoutX="67.0" layoutY="74.0" prefHeight="74.0" prefWidth="498.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <TableView fx:id="tvTicket" layoutX="66.0" layoutY="140.0" prefHeight="190.0" prefWidth="500.0">
+                           <columns>
+                              <TableColumn fx:id="tcIdPT" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="tcProductoT" prefWidth="121.0" text="Producto" />
+                              <TableColumn fx:id="tcCantidadT" prefWidth="120.0" text="Cantidad" />
+                              <TableColumn fx:id="tcPrecioT" prefWidth="98.0" text="Precio" />
+                              <TableColumn fx:id="tcMontoT" prefWidth="84.0" text="Monto" />
+                           </columns>
+                        </TableView>
+                        <Label fx:id="lbDetalles" layoutX="67.0" layoutY="335.0" prefHeight="90.0" prefWidth="498.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <Label layoutX="237.0" layoutY="427.0" text="Gracias por su preferencia">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="564.0" layoutY="7.0" mnemonicParsing="false" onAction="#cancelarTicket">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="src/main/resources/images/cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>

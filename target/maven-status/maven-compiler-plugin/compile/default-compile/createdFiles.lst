@@ -1,0 +1,10 @@
+panaderia\clases\Venta.class
+panaderia\clases\ControladorCliente.class
+panaderia\clases\ClientePremium.class
+panaderia\clases\ControladorVenta.class
+panaderia\clases\Cliente.class
+panaderia\clases\ClienteEstandar.class
+panaderia\clases\ControladorPan.class
+panaderia\clases\Direccion.class
+panaderia\FXMLPanaderiaController.class
+panaderia\clases\Pan.class
